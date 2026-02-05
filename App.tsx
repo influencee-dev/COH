@@ -1,19 +1,21 @@
 
 import React, { useState, useEffect } from 'react';
-import { Language, QuizResults } from './types.ts';
-import Home from './pages/Home.tsx';
-import About from './pages/About.tsx';
-import AssessmentLanding from './pages/AssessmentLanding.tsx';
-import Quiz from './pages/Quiz.tsx';
-import Results from './pages/Results.tsx';
-import { Header } from './components/Header.tsx';
-import { Footer } from './components/Footer.tsx';
+import { Language, QuizResults } from './types';
+import { TRANSLATIONS } from './data/translations';
+import Home from './pages/Home';
+import About from './pages/About';
+import AssessmentLanding from './pages/AssessmentLanding';
+import Quiz from './pages/Quiz';
+import Results from './pages/Results';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 
 const App: React.FC = () => {
   const [lang, setLang] = useState<Language>('en');
   const [route, setRoute] = useState<string>('home');
   const [quizResults, setQuizResults] = useState<QuizResults | null>(null);
 
+  // Simple routing logic for SPA
   const renderRoute = () => {
     switch (route) {
       case 'home': return <Home lang={lang} onNavigate={setRoute} />;
@@ -22,15 +24,13 @@ const App: React.FC = () => {
       case 'quiz': return <Quiz lang={lang} onComplete={(res) => { setQuizResults(res); setRoute('results'); }} />;
       case 'results': return quizResults ? <Results lang={lang} results={quizResults} /> : <Home lang={lang} onNavigate={setRoute} />;
       case 'book': return (
-        <div className="py-20 max-w-5xl mx-auto px-6 fade-in">
-          <div className="text-center mb-12 space-y-4">
-             <h1 className="text-5xl font-serif">Secure Your Session</h1>
-             <p className="text-gray-500 font-light max-w-xl mx-auto tracking-wide">Select a time for your 60-minute diagnostic session with Christian.</p>
-          </div>
-          <div className="bg-white border border-luxury-grey p-4 rounded-xl shadow-2xl overflow-hidden h-[800px]">
+        <div className="py-20 max-w-4xl mx-auto px-6">
+          <h1 className="text-4xl font-serif mb-8 text-center">Book a Strategy Session</h1>
+          <div className="bg-luxury-grey p-4 rounded-lg shadow-sm">
              <iframe 
                src="https://calendly.com/christianoliverharris/coaching-session-1-hour" 
-               className="w-full h-full"
+               width="100%" 
+               height="700" 
                frameBorder="0"
              ></iframe>
           </div>
@@ -41,11 +41,11 @@ const App: React.FC = () => {
   };
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
   }, [route]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-white overflow-x-hidden">
+    <div className="min-h-screen flex flex-col bg-white">
       <Header lang={lang} setLang={setLang} setRoute={setRoute} currentRoute={route} />
       <main className="flex-grow">
         {renderRoute()}
