@@ -1,0 +1,8 @@
+{
+  "name": "Christian Oliver Harris | Executive Performance Coaching",
+  "description": "Premium coaching platform for executives and leaders, featuring the Leadership Debt Assessment and Uncoded Energy Audit.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
