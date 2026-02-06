@@ -15,7 +15,6 @@ const App: React.FC = () => {
   const [route, setRoute] = useState<string>('home');
   const [quizResults, setQuizResults] = useState<QuizResults | null>(null);
 
-  // Simple routing logic for SPA
   const renderRoute = () => {
     switch (route) {
       case 'home': return <Home lang={lang} onNavigate={setRoute} />;
@@ -31,7 +30,7 @@ const App: React.FC = () => {
                src="https://calendly.com/christianoliverharris/coaching-session-1-hour" 
                width="100%" 
                height="700" 
-               frameBorder="0"
+               style={{ border: 0 }}
              ></iframe>
           </div>
         </div>
