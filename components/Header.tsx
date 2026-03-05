@@ -36,7 +36,7 @@ export const Header: React.FC<HeaderProps> = ({ lang, setLang, setRoute, current
           <NavItems />
           <div className="border-l border-luxury-grey h-4 mx-4"></div>
           <button onClick={() => setLang(lang === 'en' ? 'it' : 'en')} className="font-medium hover:text-luxury-gold">
-            {lang.toUpperCase()}
+            {(lang === 'en' ? 'it' : 'en').toUpperCase()}
           </button>
         </nav>
 
@@ -53,7 +53,7 @@ export const Header: React.FC<HeaderProps> = ({ lang, setLang, setRoute, current
         <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-luxury-grey p-6 flex flex-col space-y-4 animate-in fade-in slide-in-from-top-4">
           <NavItems />
           <button onClick={() => setLang(lang === 'en' ? 'it' : 'en')} className="text-left py-2 font-medium">
-            Language: {lang.toUpperCase()}
+            Switch to: {(lang === 'en' ? 'it' : 'en').toUpperCase()}
           </button>
         </div>
       )}

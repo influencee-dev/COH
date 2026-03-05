@@ -24,15 +24,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-12 text-sm">
-          <div className="space-y-4">
-            <h4 className="text-xs uppercase tracking-widest font-bold text-luxury-gold">Offerings</h4>
-            <ul className="space-y-2 text-gray-400 font-light">
-              <li className="hover:text-white cursor-pointer transition-colors">Executive Coaching</li>
-              <li className="hover:text-white cursor-pointer transition-colors">Team Clarity Audit</li>
-              <li className="hover:text-white cursor-pointer transition-colors">Bio-Performance Systems</li>
-            </ul>
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-1 gap-12 text-sm">
           <div className="space-y-4">
             <h4 className="text-xs uppercase tracking-widest font-bold text-luxury-gold">Legal</h4>
             <ul className="space-y-2 text-gray-400 font-light">
@@ -44,7 +36,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
         </div>
       </div>
       <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-widest text-gray-600">
-        <p>© {new Date().getFullYear()} Uncoded Leadership by Christian Oliver Harris. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Christian Oliver Harris. All rights reserved.</p>
         <p className="mt-4 md:mt-0">Designed for High Performance Leaders.</p>
       </div>
     </footer>

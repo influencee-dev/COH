@@ -8,18 +8,18 @@ export const TRANSLATIONS = {
       book: "Book a Call",
     },
     hero: {
-      title: "Executive Excellence, Decoded.",
-      subtitle: "Bridging the gap between biological performance and high-stakes leadership for founders and executives.",
-      cta1: "Take the Assessment",
+      title: "Human Resonance Coaching for Sensitive High-Achievers",
+      subtitle: "Escape the 'Golden Cage' of traditional success. Leverage your sensitivity as your greatest strategic advantage.",
+      cta1: "Audit your Authenticity Debt",
       cta2: "Book Strategy Call",
     },
     debtSection: {
-      title: "The Silent Cost: Leadership Debt",
-      description: "Leadership Debt is the hidden tax you pay when your biological systems and team clarity are out of sync. It manifests as reactive decision-making, burnout, and stagnant growth.",
+      title: "The Silent Cost: Authenticity Debt",
+      description: "Authenticity Debt is the emotional tax you pay every time you wear a 'mask' to survive a toxic culture. It manifests as exhaustion, feeling like a 'defect' in the system, and burnout.",
     },
     assessment: {
-      title: "Leadership Debt Assessment",
-      intro: "How much is your leadership really costing you? Discover the gap between current performance and your team's human potential.",
+      title: "Authenticity Debt Assessment",
+      intro: "Audit your Golden Cage: What is your success actually costing you? Measure your Authenticity, Energy, and Presence Debt.",
       start: "Start Assessment",
       step: "Question",
       next: "Next Question",
@@ -27,8 +27,8 @@ export const TRANSLATIONS = {
       finish: "Get My Results",
     },
     about: {
-      bio: "Christian Oliver Harris is an Executive & Leadership Performance Coach who specializes in high-stakes environments. By integrating neurobiology, systems thinking, and elite leadership frameworks, he helps founders eliminate Leadership Debt.",
-      philosophy: "Performance is a biological outcome. My approach is data-driven, bio-informed, and results-oriented."
+      bio: "Christian Oliver Harris is a Human Resonance Coach for sensitive high-achievers. He helps executives escape the 'Golden Cage' of traditional success, turning sensitivity into a strategic advantage.",
+      philosophy: "Your sensitivity is not a liability; it is your greatest strategic advantage."
     }
   },
   it: {
@@ -39,18 +39,18 @@ export const TRANSLATIONS = {
       book: "Prenota una Call",
     },
     hero: {
-      title: "L'Eccellenza Esecutiva, Decodificata.",
-      subtitle: "Colmare il divario tra performance biologica e leadership ad alto impatto per founder ed executive.",
-      cta1: "Fai l'Assessment",
+      title: "Coaching di Risonanza Umana per High-Achievers Sensibili",
+      subtitle: "Esci dalla 'Gabbia Dorata' del successo tradizionale. Trasforma la tua sensibilità nel tuo più grande vantaggio strategico.",
+      cta1: "Analizza il tuo Debito di Autenticità",
       cta2: "Prenota una Strategia",
     },
     debtSection: {
-      title: "Il Costo Silenzioso: Debito di Leadership",
-      description: "Il Debito di Leadership è la tassa nascosta che paghi quando i tuoi sistemi biologici e la chiarezza del team sono fuori sincrono. Si manifesta con decisioni reattive e burnout.",
+      title: "Il Costo Silenzioso: Debito di Autenticità",
+      description: "Il Debito di Autenticità è la tassa emotiva che paghi ogni volta che indossi una 'maschera' per sopravvivere a una cultura tossica. Si manifesta con esaurimento, la sensazione di essere un 'difetto' nel sistema e burnout.",
     },
     assessment: {
-      title: "Leadership Debt Assessment",
-      intro: "Quanto ti costa davvero il tuo stile di leadership? Scoprilo analizzando il divario tra performance attuale e potenziale umano.",
+      title: "Debito di Autenticità Assessment",
+      intro: "Analizza la tua Gabbia Dorata: quanto ti costa davvero il tuo successo? Misura il tuo Debito di Autenticità, Energia e Presenza.",
       start: "Inizia l'Assessment",
       step: "Domanda",
       next: "Prossima Domanda",
@@ -58,8 +58,8 @@ export const TRANSLATIONS = {
       finish: "Ricevi i Risultati",
     },
     about: {
-      bio: "Christian Oliver Harris è un Executive & Leadership Performance Coach specializzato in ambienti ad alta pressione. Integrando neurobiologia e sistemi, aiuta i leader a eliminare il Debito di Leadership.",
-      philosophy: "La performance è un risultato biologico. Il mio approccio è guidato dai dati e orientato ai risultati."
+      bio: "Christian Oliver Harris è un Coach di Risonanza Umana per high-achievers sensibili. Aiuta gli executive a uscire dalla 'Gabbia Dorata' del successo tradizionale, trasformando la sensibilità in un vantaggio strategico.",
+      philosophy: "La tua sensibilità non è una debolezza; è il tuo più grande vantaggio strategico."
     }
   }
 };

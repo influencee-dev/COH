@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Language } from '../types';
 import { TRANSLATIONS } from '../data/translations';
@@ -31,7 +30,7 @@ const About: React.FC<AboutProps> = ({ lang }) => {
             <div className="pt-8 border-t border-luxury-grey">
                <h3 className="text-xs uppercase tracking-widest font-bold mb-4">Strategic Background</h3>
                <p className="text-sm text-gray-500 leading-relaxed font-light">
-                 Christian operates at the intersection of executive coaching, neurobiology, and performance systems. His mission is to eliminate the biological and systemic friction that prevents top-tier leaders from scaling their impact.
+                 Christian helps highly intelligent, empathetic, and sensitive leaders in their 30s and 40s escape the 'Golden Cage' of traditional success. He helps them stop the 'hustle' for external recognition and design a new map - one where sensitivity is their greatest strategic advantage, and work is built around the life they actually want to live.
                </p>
             </div>
           </div>
@@ -39,35 +38,35 @@ const About: React.FC<AboutProps> = ({ lang }) => {
 
         {/* Philosophy Block */}
         <section className="bg-luxury-grey p-12 md:p-24 rounded text-center space-y-8">
-          <h2 className="text-3xl font-serif">"Performance is a biological outcome."</h2>
+          <h2 className="text-3xl font-serif">"Your sensitivity is not a liability; it is your greatest strategic advantage."</h2>
           <p className="max-w-3xl mx-auto text-lg text-gray-600 font-light italic">
             {t.about.philosophy}
           </p>
           <div className="flex justify-center gap-12 pt-8 grayscale opacity-50">
-             <span className="font-serif italic text-xl">Founder Focused</span>
-             <span className="font-serif italic text-xl">Data Driven</span>
-             <span className="font-serif italic text-xl">Neuro Optimized</span>
+             <span className="font-serif italic text-xl">Sensitive High-Achievers</span>
+             <span className="font-serif italic text-xl">Human Resonance</span>
+             <span className="font-serif italic text-xl">Authenticity First</span>
           </div>
         </section>
 
         {/* Editorial Content */}
         <section className="grid md:grid-cols-3 gap-12">
           <div className="space-y-4">
-             <h3 className="font-serif text-2xl">01. Systems</h3>
+             <h3 className="font-serif text-2xl">01. Resonance</h3>
              <p className="text-sm text-gray-600 leading-relaxed font-light">
-               We don't fix people; we fix systems. Your leadership output is only as good as the internal and organizational loops you navigate.
+               We move from external recognition (titles, the climb) to internal purpose (freedom, time, impact).
              </p>
           </div>
           <div className="space-y-4">
-             <h3 className="font-serif text-2xl">02. Biology</h3>
+             <h3 className="font-serif text-2xl">02. Integration</h3>
              <p className="text-sm text-gray-600 leading-relaxed font-light">
-               We leverage real-time biometric insights to understand when your brain is at its strategic peak and when it’s merely reacting.
+               Success includes being a great parent, partner, and human being - without feeling you lost ambition.
              </p>
           </div>
           <div className="space-y-4">
-             <h3 className="font-serif text-2xl">03. Impact</h3>
+             <h3 className="font-serif text-2xl">03. Talent Magnet</h3>
              <p className="text-sm text-gray-600 leading-relaxed font-light">
-               The end goal is a 'Green Zone' leader—one who makes high-leverage decisions with minimal cognitive fatigue.
+               By unlocking the potential of your people through safety and listening, you become the leader everyone wants to work for.
              </p>
           </div>
         </section>

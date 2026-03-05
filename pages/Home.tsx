@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Language } from '../types';
 import { TRANSLATIONS } from '../data/translations';
@@ -46,7 +45,7 @@ const Home: React.FC<HomeProps> = ({ lang, onNavigate }) => {
         </div>
       </section>
 
-      {/* Leadership Debt Section */}
+      {/* Authenticity Debt Section */}
       <section className="py-24 bg-luxury-grey px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
@@ -58,22 +57,22 @@ const Home: React.FC<HomeProps> = ({ lang, onNavigate }) => {
               <div className="flex items-start gap-4">
                 <div className="mt-1 h-6 w-6 rounded-full bg-luxury-black text-white flex items-center justify-center text-[10px] flex-shrink-0">01</div>
                 <div>
-                  <h3 className="font-semibold uppercase tracking-wider text-sm">Bio-Performance</h3>
-                  <p className="text-sm text-gray-600">Decision quality is a biological outcome. If your nervous system is in survival mode, your strategy is too.</p>
+                  <h3 className="font-semibold uppercase tracking-wider text-sm">Energy Debt</h3>
+                  <p className="text-sm text-gray-600">The emotional cost of 'masking' your true self to survive in high-pressure environments.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <div className="mt-1 h-6 w-6 rounded-full bg-luxury-black text-white flex items-center justify-center text-[10px] flex-shrink-0">02</div>
                 <div>
-                  <h3 className="font-semibold uppercase tracking-wider text-sm">Team Clarity</h3>
-                  <p className="text-sm text-gray-600">Confusion is a tax. We eliminate the gap between executive intent and team execution.</p>
+                  <h3 className="font-semibold uppercase tracking-wider text-sm">Resonance Debt</h3>
+                  <p className="text-sm text-gray-600">The hidden power leak when you suppress your empathy instead of leveraging it as your greatest strategic advantage.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <div className="mt-1 h-6 w-6 rounded-full bg-luxury-black text-white flex items-center justify-center text-[10px] flex-shrink-0">03</div>
                 <div>
-                  <h3 className="font-semibold uppercase tracking-wider text-sm">System Optimization</h3>
-                  <p className="text-sm text-gray-600">The structure of your organization should accelerate you, not exhaust you.</p>
+                  <h3 className="font-semibold uppercase tracking-wider text-sm">Presence Debt</h3>
+                  <p className="text-sm text-gray-600">The invisible cost paid by those you love most when boardroom tension spills over into your home life.</p>
                 </div>
               </div>
             </div>
@@ -85,8 +84,8 @@ const Home: React.FC<HomeProps> = ({ lang, onNavigate }) => {
                className="w-full h-full object-cover rounded shadow-2xl"
              />
              <div className="absolute -bottom-8 -left-8 bg-white p-8 border border-luxury-grey shadow-lg hidden lg:block max-w-xs">
-                <p className="text-sm italic text-gray-500 font-light">"Christian helps you stop managing stress and start managing performance."</p>
-                <div className="mt-4 font-semibold text-xs uppercase tracking-widest text-luxury-gold">Founding CEO, Tier 1 VC</div>
+                <p className="text-sm italic text-gray-500 font-light">"Christian helps you stop 'fixing' yourself and start leveraging your sensitivity as a superpower."</p>
+                <div className="mt-4 font-semibold text-xs uppercase tracking-widest text-luxury-gold">Sensitive High-Achiever</div>
              </div>
           </div>
         </div>
@@ -95,13 +94,13 @@ const Home: React.FC<HomeProps> = ({ lang, onNavigate }) => {
       {/* Philosophy / CTA */}
       <section className="py-24 px-6 text-center">
         <div className="max-w-3xl mx-auto space-y-12">
-          <h2 className="text-3xl md:text-5xl font-serif">Are you ready to audit your potential?</h2>
-          <p className="text-xl font-light text-gray-600 italic">"Most leaders are operating at 60% of their biological capacity. The other 40% is lost to unmanaged Leadership Debt."</p>
+          <h2 className="text-3xl md:text-5xl font-serif">Are you ready to audit your Authenticity Debt?</h2>
+          <p className="text-xl font-light text-gray-600 italic">"Stop paying interest on a life that doesn't fit. Discover your Authenticity Debt score."</p>
           <button 
              onClick={() => onNavigate('assessment')}
              className="px-12 py-5 bg-luxury-black text-white hover:bg-luxury-anthracite transition-all rounded shadow-xl text-sm uppercase tracking-[0.2em]"
           >
-            Measure My Leadership Debt
+            Measure My Authenticity Debt
           </button>
         </div>
       </section>

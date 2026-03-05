@@ -31,7 +31,7 @@ export interface TranslationSet {
 
 export interface Question {
   id: number;
-  category: 'clarity' | 'team' | 'bio' | 'system';
+  category: 'energy' | 'resonance' | 'presence';
   text: {
     en: string;
     it: string;
@@ -45,10 +45,9 @@ export interface Question {
 export interface QuizResults {
   totalScore: number;
   categoryScores: {
-    clarity: number;
-    team: number;
-    bio: number;
-    system: number;
+    energy: number;
+    resonance: number;
+    presence: number;
   };
   userData: {
     email: string;
