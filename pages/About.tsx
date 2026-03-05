@@ -22,15 +22,15 @@ const About: React.FC<AboutProps> = ({ lang }) => {
              />
           </div>
           <div className="space-y-8">
-            <span className="text-luxury-gold text-xs uppercase tracking-[0.4em] font-bold">The Profile</span>
+            <span className="text-luxury-gold text-xs uppercase tracking-[0.4em] font-bold">{t.about.profile}</span>
             <h1 className="text-5xl font-serif leading-tight">Christian Oliver Harris</h1>
             <p className="text-xl leading-relaxed font-light text-luxury-anthracite">
               {t.about.bio}
             </p>
             <div className="pt-8 border-t border-luxury-grey">
-               <h3 className="text-xs uppercase tracking-widest font-bold mb-4">Strategic Background</h3>
+               <h3 className="text-xs uppercase tracking-widest font-bold mb-4">{t.about.background.title}</h3>
                <p className="text-sm text-gray-500 leading-relaxed font-light">
-                 Christian helps highly intelligent, empathetic, and sensitive leaders in their 30s and 40s escape the 'Golden Cage' of traditional success. He helps them stop the 'hustle' for external recognition and design a new map - one where sensitivity is their greatest strategic advantage, and work is built around the life they actually want to live.
+                 {t.about.background.desc}
                </p>
             </div>
           </div>
@@ -38,7 +38,7 @@ const About: React.FC<AboutProps> = ({ lang }) => {
 
         {/* Philosophy Block */}
         <section className="bg-luxury-grey p-12 md:p-24 rounded text-center space-y-8">
-          <h2 className="text-3xl font-serif">"Your sensitivity is not a liability; it is your greatest strategic advantage."</h2>
+          <h2 className="text-3xl font-serif">"{t.about.philosophy}"</h2>
           <p className="max-w-3xl mx-auto text-lg text-gray-600 font-light italic">
             {t.about.philosophy}
           </p>
@@ -52,21 +52,21 @@ const About: React.FC<AboutProps> = ({ lang }) => {
         {/* Editorial Content */}
         <section className="grid md:grid-cols-3 gap-12">
           <div className="space-y-4">
-             <h3 className="font-serif text-2xl">01. Resonance</h3>
+             <h3 className="font-serif text-2xl">{t.about.pillars.p1.title}</h3>
              <p className="text-sm text-gray-600 leading-relaxed font-light">
-               We move from external recognition (titles, the climb) to internal purpose (freedom, time, impact).
+               {t.about.pillars.p1.desc}
              </p>
           </div>
           <div className="space-y-4">
-             <h3 className="font-serif text-2xl">02. Integration</h3>
+             <h3 className="font-serif text-2xl">{t.about.pillars.p2.title}</h3>
              <p className="text-sm text-gray-600 leading-relaxed font-light">
-               Success includes being a great parent, partner, and human being - without feeling you lost ambition.
+               {t.about.pillars.p2.desc}
              </p>
           </div>
           <div className="space-y-4">
-             <h3 className="font-serif text-2xl">03. Talent Magnet</h3>
+             <h3 className="font-serif text-2xl">{t.about.pillars.p3.title}</h3>
              <p className="text-sm text-gray-600 leading-relaxed font-light">
-               By unlocking the potential of your people through safety and listening, you become the leader everyone wants to work for.
+               {t.about.pillars.p3.desc}
              </p>
           </div>
         </section>

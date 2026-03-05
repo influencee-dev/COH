@@ -1,5 +1,6 @@
 import React from 'react';
 import { Language, QuizResults } from '../types';
+import { TRANSLATIONS } from '../data/translations';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 
 interface ResultsProps {
@@ -8,6 +9,7 @@ interface ResultsProps {
 }
 
 const Results: React.FC<ResultsProps> = ({ lang, results }) => {
+  const t = TRANSLATIONS[lang];
   const { totalScore, categoryScores, userData } = results;
 
   const getDebtLevel = () => {
@@ -27,22 +29,22 @@ const Results: React.FC<ResultsProps> = ({ lang, results }) => {
   return (
     <div className="py-24 px-6 max-w-5xl mx-auto space-y-20">
       <div className="text-center space-y-4">
-        <span className="text-[10px] uppercase tracking-[0.4em] text-gray-400 font-bold">Authenticity Audit Report</span>
-        <h1 className="text-4xl md:text-6xl font-serif">Your Authenticity Analysis</h1>
-        <p className="text-xl text-gray-500 font-light">Prepared for {userData.email} @ {userData.company}</p>
+        <span className="text-[10px] uppercase tracking-[0.4em] text-gray-400 font-bold">{t.assessment.auditType}</span>
+        <h1 className="text-4xl md:text-6xl font-serif">{t.results.title}</h1>
+        <p className="text-xl text-gray-500 font-light">{t.results.subtitle} {userData.email} @ {userData.company}</p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-16 items-center bg-luxury-grey p-12 rounded-lg">
         <div className="space-y-8">
           <div className="space-y-2">
-            <h2 className="text-5xl font-serif">{totalScore} <span className="text-lg font-sans text-gray-400 font-light uppercase tracking-widest">/ 30 Total Pts</span></h2>
+            <h2 className="text-5xl font-serif">{totalScore} <span className="text-lg font-sans text-gray-400 font-light uppercase tracking-widest">{t.results.totalPoints}</span></h2>
             <p className={`text-2xl font-semibold uppercase tracking-widest ${debt.color}`}>{debt.label}</p>
           </div>
           <p className="text-lg leading-relaxed text-luxury-anthracite font-light italic">
             {debt.description}
           </p>
           <div className="pt-8 border-t border-gray-300">
-             <h3 className="text-xs uppercase tracking-widest font-bold mb-4">Core Recommendations:</h3>
+             <h3 className="text-xs uppercase tracking-widest font-bold mb-4">{t.results.recommendations}</h3>
              <ul className="space-y-3 text-sm text-gray-600">
                 <li className="flex items-start gap-2">
                    <span className="text-luxury-gold">•</span>
@@ -76,24 +78,24 @@ const Results: React.FC<ResultsProps> = ({ lang, results }) => {
       {/* Bonus Resource Section */}
       <section className="bg-luxury-black text-white p-12 md:p-20 rounded-lg space-y-12">
         <div className="text-center space-y-4">
-          <span className="text-luxury-gold text-xs uppercase tracking-[0.4em] font-bold">Bonus Resource</span>
-          <h2 className="text-4xl font-serif">The Authenticity Audit</h2>
+          <span className="text-luxury-gold text-xs uppercase tracking-[0.4em] font-bold">{t.results.bonus}</span>
+          <h2 className="text-4xl font-serif">{t.results.bonusTitle}</h2>
           <p className="text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
-            This diagnostic framework is used by sensitive high-achievers to optimize their daily output and escape the 'Golden Cage'.
+            {t.results.bonusDesc}
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           <div className="p-8 bg-white/5 border border-white/10 rounded space-y-4">
-             <h3 className="font-serif text-xl border-b border-white/10 pb-4">Self-Diagnosis</h3>
+             <h3 className="font-serif text-xl border-b border-white/10 pb-4">{t.results.diagnosis}</h3>
              <p className="text-sm text-gray-400">Score 1-10 daily: <br/><strong>Sleep</strong> (Depth) <br/><strong>Mind</strong> (Clarity) <br/><strong>Load</strong> (Emotional)</p>
           </div>
           <div className="p-8 bg-white/5 border border-white/10 rounded space-y-4">
-             <h3 className="font-serif text-xl border-b border-white/10 pb-4">Decision Matrix</h3>
+             <h3 className="font-serif text-xl border-b border-white/10 pb-4">{t.results.matrix}</h3>
              <p className="text-sm text-gray-400"><strong>Green (8-10):</strong> Deep Work. <br/><strong>Yellow (5-7):</strong> Operations. <br/><strong>Red (&lt;5):</strong> Recovery only.</p>
           </div>
           <div className="p-8 bg-white/5 border border-white/10 rounded space-y-4">
-             <h3 className="font-serif text-xl border-b border-white/10 pb-4">Manual Override</h3>
+             <h3 className="font-serif text-xl border-b border-white/10 pb-4">{t.results.override}</h3>
              <p className="text-sm text-gray-400">Hack the Vagus Nerve: <br/><strong>Breathing 4-7-8</strong>. <br/>Reset cognitive fog in 120 seconds.</p>
           </div>
         </div>
@@ -110,14 +112,14 @@ const Results: React.FC<ResultsProps> = ({ lang, results }) => {
             }}
             className="inline-block bg-luxury-gold text-black px-12 py-5 rounded shadow-2xl text-xs uppercase tracking-[0.2em] font-bold hover:bg-white transition-all"
           >
-            Download Results
+            {t.results.download}
           </button>
         </div>
       </section>
 
       {/* Calendly Integration */}
       <div className="space-y-12 py-16">
-        <h2 className="text-4xl font-serif text-center">Book Your Private Strategy Call</h2>
+        <h2 className="text-4xl font-serif text-center">{t.results.bookCall}</h2>
         <div className="bg-luxury-grey rounded overflow-hidden shadow-sm">
            <iframe 
              src="https://calendly.com/christianoliverharris/coaching-session-1-hour" 

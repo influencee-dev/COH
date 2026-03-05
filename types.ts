@@ -17,6 +17,16 @@ export interface TranslationSet {
   debtSection: {
     title: string;
     description: string;
+    pillars: {
+      energy: { title: string; desc: string };
+      resonance: { title: string; desc: string };
+      presence: { title: string; desc: string };
+    };
+  };
+  cta: {
+    title: string;
+    subtitle: string;
+    button: string;
   };
   assessment: {
     title: string;

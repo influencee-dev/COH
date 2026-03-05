@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Language, QuizResults, Question } from '../types';
 import { QUESTIONS } from '../data/questions';
@@ -10,6 +9,7 @@ interface QuizProps {
 }
 
 const Quiz: React.FC<QuizProps> = ({ lang, onComplete }) => {
+  const t = TRANSLATIONS[lang];
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState<number[]>(new Array(QUESTIONS.length).fill(-1));
   const [showGate, setShowGate] = useState(false);
@@ -52,12 +52,12 @@ const Quiz: React.FC<QuizProps> = ({ lang, onComplete }) => {
     return (
       <div className="py-24 px-6 max-w-xl mx-auto space-y-12 animate-in fade-in slide-in-from-bottom-8">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl font-serif tracking-tight">Assessment Complete.</h2>
-          <p className="text-gray-500 font-light">Enter your executive details to decode your results and receive the Uncoded Energy Audit PDF.</p>
+          <h2 className="text-3xl font-serif tracking-tight">{t.assessment.gate.title}</h2>
+          <p className="text-gray-500 font-light">{t.assessment.gate.subtitle}</p>
         </div>
         <form onSubmit={handleSubmitResults} className="space-y-6">
           <div className="space-y-2">
-            <label className="text-[10px] uppercase tracking-widest font-bold text-gray-400">Professional Email</label>
+            <label className="text-[10px] uppercase tracking-widest font-bold text-gray-400">{t.assessment.gate.email}</label>
             <input 
               required
               type="email"
@@ -68,7 +68,7 @@ const Quiz: React.FC<QuizProps> = ({ lang, onComplete }) => {
             />
           </div>
           <div className="space-y-2">
-            <label className="text-[10px] uppercase tracking-widest font-bold text-gray-400">Organization</label>
+            <label className="text-[10px] uppercase tracking-widest font-bold text-gray-400">{t.assessment.gate.company}</label>
             <input 
               required
               type="text"
@@ -79,7 +79,7 @@ const Quiz: React.FC<QuizProps> = ({ lang, onComplete }) => {
             />
           </div>
           <div className="space-y-2">
-            <label className="text-[10px] uppercase tracking-widest font-bold text-gray-400">Current Role</label>
+            <label className="text-[10px] uppercase tracking-widest font-bold text-gray-400">{t.assessment.gate.role}</label>
             <input 
               required
               type="text"
@@ -93,7 +93,7 @@ const Quiz: React.FC<QuizProps> = ({ lang, onComplete }) => {
             type="submit"
             className="w-full py-5 bg-luxury-black text-white hover:bg-luxury-anthracite transition-all rounded shadow-xl text-xs uppercase tracking-[0.2em] mt-8"
           >
-            Access My Leadership Audit
+            {t.assessment.gate.submit}
           </button>
         </form>
       </div>
@@ -106,7 +106,7 @@ const Quiz: React.FC<QuizProps> = ({ lang, onComplete }) => {
       <div className="mb-16">
         <div className="flex justify-between items-center mb-4">
           <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-400">
-            {TRANSLATIONS[lang].assessment.step} {currentStep + 1} / {QUESTIONS.length}
+            {t.assessment.step} {currentStep + 1} / {QUESTIONS.length}
           </span>
           <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-luxury-gold">
             {Math.round(progress)}% Complete
@@ -151,7 +151,7 @@ const Quiz: React.FC<QuizProps> = ({ lang, onComplete }) => {
             onClick={() => setCurrentStep(prev => prev - 1)}
             className="text-[10px] uppercase tracking-widest font-bold disabled:opacity-30 hover:text-luxury-gold transition-colors"
           >
-            &larr; {TRANSLATIONS[lang].assessment.back}
+            &larr; {t.assessment.back}
           </button>
         </div>
       </div>

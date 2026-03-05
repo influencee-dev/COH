@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Language } from '../types';
 import { TRANSLATIONS } from '../data/translations';
@@ -16,7 +15,7 @@ const AssessmentLanding: React.FC<AssessmentLandingProps> = ({ lang, onNavigate 
       <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <div className="space-y-8">
           <div className="space-y-2">
-            <span className="text-luxury-gold text-xs uppercase tracking-[0.3em] font-bold">Authenticity Audit</span>
+            <span className="text-luxury-gold text-xs uppercase tracking-[0.3em] font-bold">{t.assessment.auditType}</span>
             <h1 className="text-4xl md:text-5xl font-serif leading-tight">{t.assessment.title}</h1>
           </div>
           <p className="text-xl text-gray-600 font-light leading-relaxed italic border-l-4 border-luxury-gold pl-6">
@@ -25,15 +24,11 @@ const AssessmentLanding: React.FC<AssessmentLandingProps> = ({ lang, onNavigate 
           <ul className="space-y-4 text-sm text-gray-600">
             <li className="flex items-center gap-3">
               <svg className="w-5 h-5 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-              6 Questions focused on Energy, Resonance, and Presence
+              {t.assessment.questionsCount}
             </li>
             <li className="flex items-center gap-3">
               <svg className="w-5 h-5 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-              Authenticity Debt analysis
-            </li>
-            <li className="flex items-center gap-3">
-              <svg className="w-5 h-5 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-              Instant wake-up call & new map
+              {t.assessment.focus}
             </li>
           </ul>
           <button 
@@ -44,12 +39,9 @@ const AssessmentLanding: React.FC<AssessmentLandingProps> = ({ lang, onNavigate 
           </button>
         </div>
         <div className="bg-luxury-grey p-10 rounded shadow-inner space-y-6">
-           <h3 className="font-serif text-xl">What is "Authenticity Debt"?</h3>
+           <h3 className="font-serif text-xl">{t.assessment.whatIs}</h3>
            <p className="text-sm text-gray-600 leading-relaxed">
-             For a Highly Sensitive Person (HSP) in a leadership role, "Authenticity Debt" is the emotional tax you pay every time you wear the "Red Power" mask to survive a meeting or fit into a toxic culture.
-           </p>
-           <p className="text-sm text-gray-600 leading-relaxed">
-             This assessment measures your current 'Interest Rate'—how much emotional exhaustion you are accruing daily.
+             {t.assessment.whatIsDesc}
            </p>
         </div>
       </div>
