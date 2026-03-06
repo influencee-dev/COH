@@ -28,7 +28,7 @@ export const Header: React.FC<HeaderProps> = ({ lang, setLang, setRoute, current
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex flex-col cursor-pointer" onClick={() => setRoute('home')}>
           <img 
-               src="public/COH.png" 
+               src="COH.png" 
                alt="logo Christian Oliver Harris" 
              />
         </div>
