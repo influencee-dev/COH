@@ -79,7 +79,7 @@ const Home: React.FC<HomeProps> = ({ lang, onNavigate }) => {
           </div>
           <div className="relative aspect-square">
              <img 
-               src="home.jpg" 
+               src="home.png" 
                alt="Christian Oliver Harris" 
                className="w-full h-full object-cover rounded shadow-2xl"
              />
