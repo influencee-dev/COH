@@ -29,7 +29,7 @@ export const Header: React.FC<HeaderProps> = ({ lang, setLang, setRoute, current
         <div className="flex flex-col cursor-pointer" onClick={() => setRoute('home')}>
           <img 
                src="COH.png" 
-               alt="logo Christian Oliver Harris" 
+               alt="logo Christian Oliver Harris" width="200" height="100"
              />
         </div>
 
