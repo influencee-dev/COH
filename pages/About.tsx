@@ -16,7 +16,7 @@ const About: React.FC<AboutProps> = ({ lang }) => {
         <section className="grid md:grid-cols-2 gap-16 items-center">
           <div className="relative aspect-[3/4] overflow-hidden rounded">
              <img 
-               src="about.jpg" 
+               src="about.png" 
                alt="Christian Oliver Harris Profile" 
                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
              />
