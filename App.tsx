@@ -27,7 +27,7 @@ const App: React.FC = () => {
           <h1 className="text-4xl font-serif mb-8 text-center">Book a Strategy Session</h1>
           <div className="bg-luxury-grey p-4 rounded-lg shadow-sm">
              <iframe 
-               src="https://calendly.com/christianoliverharris/coaching-session-1-hour" 
+               src="https://calendly.com/christianoliverharris/meet-chris" 
                width="100%" 
                height="700" 
                style={{ border: 0 }}
