@@ -27,8 +27,10 @@ export const Header: React.FC<HeaderProps> = ({ lang, setLang, setRoute, current
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-luxury-grey">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex flex-col cursor-pointer" onClick={() => setRoute('home')}>
-          <span className="font-serif text-2xl tracking-widest font-bold">COH</span>
-          <span className="text-[10px] uppercase tracking-[0.2em] -mt-1 opacity-60">Christian Oliver Harris</span>
+          <img 
+            src="COH.png" 
+            alt="Logo"
+          />
         </div>
 
         {/* Desktop Nav */}
