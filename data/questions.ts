@@ -24,27 +24,27 @@ export const QUESTIONS: Question[] = [
     },
     options: [
       { label: { en: "None. I am fully myself.", it: "Nessuna. Sono pienamente me stesso." }, points: 0 },
-      { label: { en: "Some. I tone down my sensitivity.", it: "Un po'. Attenuto la mia sensibilità." }, points: 2 },
+      { label: { en: "Some. I tone down my relational depth.", it: "Un po'. Attenuo la mia profondità relazionale." }, points: 2 },
       { label: { en: "Most of it. It's exhausting.", it: "La maggior parte. È estenuante." }, points: 5 }
     ]
   },
-  // SECTION 2: RESONANCE DEBT (The Hidden Power Leak)
+  // SECTION 2: CONNECTION DEBT (The Hidden Power Leak)
   {
     id: 3,
-    category: 'resonance',
+    category: 'connection',
     text: {
-      en: "Do people follow you because of your title (Authority) or because of the psychological safety you create (Resonance)?",
-      it: "Le persone ti seguono per il tuo titolo (Autorità) o per la sicurezza psicologica che crei (Risonanza)?"
+      en: "Do people follow you because of your title (Authority) or because of the psychological safety you create (Connection)?",
+      it: "Le persone ti seguono per il tuo titolo (Autorità) o per la sicurezza psicologica che crei (Connessione)?"
     },
     options: [
-      { label: { en: "Resonance. They trust me deeply.", it: "Risonanza. Si fidano profondamente di me." }, points: 0 },
+      { label: { en: "Connection. They trust me deeply.", it: "Connessione. Si fidano profondamente di me." }, points: 0 },
       { label: { en: "A mix of both.", it: "Un mix di entrambi." }, points: 2 },
       { label: { en: "Authority. I feel I have to push them.", it: "Autorità. Sento di doverli spingere." }, points: 5 }
     ]
   },
   {
     id: 4,
-    category: 'resonance',
+    category: 'connection',
     text: {
       en: "How often do you feel you have to suppress your empathy to be taken seriously as a leader?",
       it: "Quanto spesso senti di dover sopprimere la tua empatia per essere preso sul serio come leader?"

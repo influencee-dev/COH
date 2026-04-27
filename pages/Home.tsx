@@ -64,8 +64,8 @@ const Home: React.FC<HomeProps> = ({ lang, onNavigate }) => {
               <div className="flex items-start gap-4">
                 <div className="mt-1 h-6 w-6 rounded-full bg-luxury-black text-white flex items-center justify-center text-[10px] flex-shrink-0">02</div>
                 <div>
-                  <h3 className="font-semibold uppercase tracking-wider text-sm">{t.debtSection.pillars.resonance.title}</h3>
-                  <p className="text-sm text-gray-600">{t.debtSection.pillars.resonance.desc}</p>
+                  <h3 className="font-semibold uppercase tracking-wider text-sm">{t.debtSection.pillars.connection.title}</h3>
+                  <p className="text-sm text-gray-600">{t.debtSection.pillars.connection.desc}</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -79,13 +79,13 @@ const Home: React.FC<HomeProps> = ({ lang, onNavigate }) => {
           </div>
           <div className="relative aspect-square">
              <img 
-               src="home.png" 
+               src="https://picsum.photos/800/800?grayscale" 
                alt="Christian Oliver Harris" 
                className="w-full h-full object-cover rounded shadow-2xl"
              />
              <div className="absolute -bottom-8 -left-8 bg-white p-8 border border-luxury-grey shadow-lg hidden lg:block max-w-xs">
-                <p className="text-sm italic text-gray-500 font-light">"Christian helps you stop 'fixing' yourself and start leveraging your sensitivity as a superpower."</p>
-                <div className="mt-4 font-semibold text-xs uppercase tracking-widest text-luxury-gold">Sensitive High-Achiever</div>
+                <p className="text-sm italic text-gray-500 font-light">"Christian helps you stop 'fixing' yourself and start leveraging your relational depth as a strategic advantage."</p>
+                <div className="mt-4 font-semibold text-xs uppercase tracking-widest text-luxury-gold">Authentic Leadership</div>
              </div>
           </div>
         </div>

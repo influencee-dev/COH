@@ -34,7 +34,7 @@ const Quiz: React.FC<QuizProps> = ({ lang, onComplete }) => {
     e.preventDefault();
     
     // Calculate category scores
-    const categoryTotals = { energy: 0, resonance: 0, presence: 0 };
+    const categoryTotals = { energy: 0, connection: 0, presence: 0 };
     answers.forEach((pts, idx) => {
       categoryTotals[QUESTIONS[idx].category] += pts;
     });

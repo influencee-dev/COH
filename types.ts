@@ -19,7 +19,7 @@ export interface TranslationSet {
     description: string;
     pillars: {
       energy: { title: string; desc: string };
-      resonance: { title: string; desc: string };
+      connection: { title: string; desc: string };
       presence: { title: string; desc: string };
     };
   };
@@ -36,12 +36,38 @@ export interface TranslationSet {
     next: string;
     back: string;
     finish: string;
+    auditType: string;
+    questionsCount: string;
+    focus: string;
+    whatIs: string;
+    whatIsDesc: string;
+    gate: {
+      title: string;
+      subtitle: string;
+      email: string;
+      company: string;
+      role: string;
+      submit: string;
+    };
+  };
+  results: {
+    title: string;
+    subtitle: string;
+    totalPoints: string;
+    recommendations: string;
+    bookCall: string;
+    download: string;
+  };
+  about: {
+    bio: string;
+    philosophy: string;
+    profile: string;
   };
 }
 
 export interface Question {
   id: number;
-  category: 'energy' | 'resonance' | 'presence';
+  category: 'energy' | 'connection' | 'presence';
   text: {
     en: string;
     it: string;
@@ -56,7 +82,7 @@ export interface QuizResults {
   totalScore: number;
   categoryScores: {
     energy: number;
-    resonance: number;
+    connection: number;
     presence: number;
   };
   userData: {

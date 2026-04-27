@@ -13,18 +13,39 @@ const Results: React.FC<ResultsProps> = ({ lang, results }) => {
   const { totalScore, categoryScores, userData } = results;
 
   const getDebtLevel = () => {
-    if (totalScore <= 5) return { label: 'Low Authenticity Debt', color: 'text-green-600', description: 'You are leading with high resonance and presence. Keep leveraging your sensitivity.' };
-    if (totalScore <= 15) return { label: 'Medium Authenticity Debt', color: 'text-luxury-gold', description: 'You are paying a high "interest" in emotional exhaustion. It is time to redesign your map.' };
-    return { label: 'Critical Authenticity Debt', color: 'text-red-600', description: 'You are in the "Golden Cage". Immediate intervention required to avoid burnout.' };
+    if (totalScore <= 5) return { 
+      label: 'Low Authenticity Debt', 
+      color: 'text-green-600', 
+      description: 'You are leading with high connection and presence. Keep leveraging your relational depth.' 
+    };
+    if (totalScore <= 15) return { 
+      label: 'Medium Authenticity Debt', 
+      color: 'text-luxury-gold', 
+      description: 'You are paying a high "interest" in emotional exhaustion. It is time to redesign your map.' 
+    };
+    return { 
+      label: 'Critical Authenticity Debt', 
+      color: 'text-red-600', 
+      description: 'You are in the "Golden Cage". Immediate intervention required to avoid burnout.' 
+    };
   };
 
   const debt = getDebtLevel();
 
   const chartData = [
     { subject: 'Energy', A: categoryScores.energy, fullMark: 10 },
-    { subject: 'Resonance', A: categoryScores.resonance, fullMark: 10 },
+    { subject: 'Connection', A: categoryScores.connection, fullMark: 10 },
     { subject: 'Presence', A: categoryScores.presence, fullMark: 10 },
   ];
+
+  const handleDownload = () => {
+    const element = document.createElement('a');
+    const file = new Blob([JSON.stringify(results, null, 2)], {type: 'application/json'});
+    element.href = URL.createObjectURL(file);
+    element.download = "Authenticity_Audit_Results.json";
+    document.body.appendChild(element);
+    element.click();
+  };
 
   return (
     <div className="py-24 px-6 max-w-5xl mx-auto space-y-20">
@@ -52,9 +73,17 @@ const Results: React.FC<ResultsProps> = ({ lang, results }) => {
                 </li>
                 <li className="flex items-start gap-2">
                    <span className="text-luxury-gold">•</span>
-                   {categoryScores.resonance < 5 ? "Identify one area where you can lead with empathy instead of authority." : "Your resonance is a strength. Keep building it."}
+                   {categoryScores.connection < 5 ? "Identify one area where you can lead with empathy instead of authority." : "Your connection is a strength. Keep building it."}
                 </li>
              </ul>
+          </div>
+          <div className="pt-4">
+            <button 
+              onClick={handleDownload}
+              className="text-xs uppercase tracking-widest font-bold text-luxury-gold hover:text-luxury-black transition-colors"
+            >
+              &darr; {t.results.download}
+            </button>
           </div>
         </div>
 
@@ -74,48 +103,6 @@ const Results: React.FC<ResultsProps> = ({ lang, results }) => {
           </ResponsiveContainer>
         </div>
       </div>
-
-      {/* Bonus Resource Section */}
-      <section className="bg-luxury-black text-white p-12 md:p-20 rounded-lg space-y-12">
-        <div className="text-center space-y-4">
-          <span className="text-luxury-gold text-xs uppercase tracking-[0.4em] font-bold">{t.results.bonus}</span>
-          <h2 className="text-4xl font-serif">{t.results.bonusTitle}</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
-            {t.results.bonusDesc}
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="p-8 bg-white/5 border border-white/10 rounded space-y-4">
-             <h3 className="font-serif text-xl border-b border-white/10 pb-4">{t.results.diagnosis}</h3>
-             <p className="text-sm text-gray-400">Score 1-10 daily: <br/><strong>Sleep</strong> (Depth) <br/><strong>Mind</strong> (Clarity) <br/><strong>Load</strong> (Emotional)</p>
-          </div>
-          <div className="p-8 bg-white/5 border border-white/10 rounded space-y-4">
-             <h3 className="font-serif text-xl border-b border-white/10 pb-4">{t.results.matrix}</h3>
-             <p className="text-sm text-gray-400"><strong>Green (8-10):</strong> Deep Work. <br/><strong>Yellow (5-7):</strong> Operations. <br/><strong>Red (&lt;5):</strong> Recovery only.</p>
-          </div>
-          <div className="p-8 bg-white/5 border border-white/10 rounded space-y-4">
-             <h3 className="font-serif text-xl border-b border-white/10 pb-4">{t.results.override}</h3>
-             <p className="text-sm text-gray-400">Hack the Vagus Nerve: <br/><strong>Breathing 4-7-8</strong>. <br/>Reset cognitive fog in 120 seconds.</p>
-          </div>
-        </div>
-
-        <div className="text-center pt-8">
-          <button 
-            onClick={() => {
-              const element = document.createElement('a');
-              const file = new Blob([JSON.stringify(results, null, 2)], {type: 'application/json'});
-              element.href = URL.createObjectURL(file);
-              element.download = "Authenticity_Audit_Results.json";
-              document.body.appendChild(element);
-              element.click();
-            }}
-            className="inline-block bg-luxury-gold text-black px-12 py-5 rounded shadow-2xl text-xs uppercase tracking-[0.2em] font-bold hover:bg-white transition-all"
-          >
-            {t.results.download}
-          </button>
-        </div>
-      </section>
 
       {/* Calendly Integration */}
       <div className="space-y-12 py-16">
